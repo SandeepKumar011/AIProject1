@@ -9,6 +9,7 @@ pipeline{
         stage('Test'){
             steps{
                 echo 'Testing... is in progresss'
+                 bat 'mvn test'
             }
         }
         stage('Deploy'){

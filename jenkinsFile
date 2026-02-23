@@ -5,9 +5,16 @@ pipeline{
             steps{
                 echo 'Building testing...'
                  bat 'npm install'
-                 bat 'npx playwright install'
             }
         }
+
+         stage('install Playwright'){
+            steps{
+                echo 'Installing Playwright...'
+                bat 'npx playwright install'
+            }
+        }
+
         stage('Test'){
             steps{
                 echo 'Testing... is in progresss'

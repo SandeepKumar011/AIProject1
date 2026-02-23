@@ -4,12 +4,13 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building testing...'
+                 bat 'npm install'
             }
         }
         stage('Test'){
             steps{
                 echo 'Testing... is in progresss'
-                 bat 'mvn test'
+                 bat 'npx playwright test tests/login.spec.ts'
             }
         }
         stage('Deploy'){
